@@ -19,6 +19,7 @@ public class ItemValidatior implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         Item item = (Item) target;
+
         // 상품명에 대한 오류 처리를 위한 조건문
         if (!StringUtils.hasText(item.getItemName())) {
             errors.rejectValue("itemName", "required");
